@@ -1,0 +1,179 @@
+html, body {
+    max-width: 100%;
+    /* overflow-x: hidden; */
+    position: relative;
+}
+
+body {
+    height: 80vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(/assets/dudong.png); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #edeae4;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.algo-display{
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+    font-family: monospace;
+    overflow: hidden;
+    max-width: 100%;
+    
+    position: relative;
+}
+
+.algos-cont{
+    color: rgb(0, 0, 0);
+    font-family: monospace;
+    font-size: 2.25rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    animation: typing 5.5s steps(15) infinite alternate-reverse;
+    margin: 20px auto; /* Center the container with some margin */ 
+    
+}
+
+@keyframes typing {
+    0%, 40% {
+        width: 0;
+    }
+    60%, 100% { 
+        width: 17.5ch;
+    }
+}
+
+.given-cont{
+    background: rgba(255, 255, 255, 1); /* Semi-transparent white background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 15px 5px rgba(150, 150, 150, 0.5);
+    padding: 25px; /* Add some padding inside the container */
+    backdrop-filter: blur(10px); /* Optional: Add a blur effect for a frosted glass look */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    margin: 20px; /* Center the container with some margin */
+    max-width: 100%; /* Limit the width of the container */
+    font-size: 1.5rem;
+    display: grid;
+    flex-direction: column; 
+    overflow: hidden;
+    word-break: break-word;
+}
+
+#at-box{
+    border-radius: 9.5px; /* Rounded corners */
+    text-align: center;
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+#bt-box{
+
+    border-radius: 9.5px; /* Rounded corners */
+    text-align: center;
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+/* #at-label{
+    margin: 5px 0;
+}
+#bt-label{
+    margin: 5px 0;
+} */
+
+.submit-button{
+    color: rgb(255, 255, 255);
+    border: 2px solid  rgb(0, 0, 0);
+    background: rgb(242, 6, 6);
+    border-radius: 9.5px; /* Rounded corners */
+    box-shadow: 0 0 15px 5px rgba(150, 150, 150, 0.5); /* White glowing shadow */
+    font-family: monospace;
+    font-size: 1.5rem;
+    padding: 10px; /* Add some padding inside the container */
+    margin: 10px 0;
+    word-break: break-word;
+}
+
+.submit-button:focus{
+    font-size: 1.5rem;
+}
+
+.submit-button:hover{
+    color: rgb(255, 0, 0);
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: ease-in-out .8s;
+}
+
+.output{
+    border: 2px solid  rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    border-radius: 9.5px; /* Rounded corners */
+    text-align: center;
+    font-size: 1.5rem;
+    word-break: break-word;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5); /* White glowing shadow */
+    padding: 10px;
+    transition: ease-in-out .3s;
+}
+
+.output:hover{
+    /* border: 2px solid  rgb(255, 255, 255); */
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: ease-in-out .8s;
+}
+
+.output-text:hover{
+    color: rgb(255, 0, 0);
+    transition: ease-in-out .5s;
+}
+.output-process:hover{
+     color: rgb(255, 255, 255);
+}
+.output-text a{
+    display:block;
+    color: rgb(255, 255, 255);
+    position: relative;
+}   
+.output-text .algo-list{
+    display: none;
+    border-radius: 9.5px; /* Rounded corners */
+    padding: 5px;
+}
+.output-text:hover .algo-list{
+    display:block;
+}
+
+.output-text a:hover{
+    background-color: rgba(150, 150, 150, 0.5);
+    border-radius: 6.5px; /* Rounded corners */
+    margin: 10px 0;
+    padding: 3px;
+    transition: ease-in-out .1s;
+}   
+.fcfsCont{
+    letter-spacing: 1px;
+    font-size: 3ch;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.fcfsAlgo{
+    letter-spacing: 1px;
+    font-size: 3ch;
+    white-space: nowrap;
+    overflow: hidden;
+}
