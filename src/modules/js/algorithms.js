@@ -20,8 +20,7 @@ export function algorithms(){
                 algoAnc.textContent = algo;
                 
                 algos.appendChild(algoAnc);
-                // console.log(algoAnc)
-                // console.log("algo listing func")  
+                // console.log('algo listing func',algoAnc);  
         })
         
     }

@@ -164,6 +164,23 @@ body {
     padding: 3px;
     transition: ease-in-out .1s;
 }   
+
+table, td, th {
+    max-width: 55rem;
+    border: 1px solid black;
+    padding: 3px;
+    margin: 10px 0;
+    word-break: break-word;
+    overflow: hidden;
+  
+}
+
+.output:hover table, .output:hover th, .output:hover  td {
+
+    border: 1px solid white;
+    transition: ease-in-out .8s;
+  
+}
 .fcfsCont{
     letter-spacing: 1px;
     font-size: 3ch;
