@@ -27,7 +27,7 @@ export function convert() {
 
         processOutTable.appendChild(tableRow);
         outputProcess.appendChild(processOutTable);
-        console.log("process table created");
+        // console.log("process table created");
 
         headers.forEach(headerText => {
             const header = document.createElement("th");

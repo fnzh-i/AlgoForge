@@ -53,6 +53,20 @@ body {
     }
 }
 
+.icons{
+    text-align: center;
+}
+.icons a{
+    
+    color: black;
+    margin: 10rem;
+}
+.icons:hover a{
+    color: rgb(242, 6, 6);  
+    cursor: pointer;
+    transition: ease-in-out .8s;
+}
+
 .given-cont{
     background: rgba(255, 255, 255, 1); /* Semi-transparent white background */
     border-radius: 15px; /* Rounded corners */
@@ -110,7 +124,7 @@ body {
 }
 
 .submit-button:hover{
-    color: rgb(255, 0, 0);
+    color: rgb(242, 6, 6);
     background: rgb(0, 0, 0);
     cursor: pointer;
     transition: ease-in-out .8s;
@@ -137,7 +151,7 @@ body {
 }
 
 .output-text:hover{
-    color: rgb(255, 0, 0);
+    color: rgb(242, 6, 6);
     transition: ease-in-out .5s;
 }
 .output-process:hover{
