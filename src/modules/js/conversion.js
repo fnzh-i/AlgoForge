@@ -48,7 +48,15 @@ export function convert() {
                 td.textContent = data;
                 tableRow.appendChild(td);
             });
-            processOutTable.appendChild(tableRow);
+
+            if(arrT.length != burT.length){
+                submits.textContent = "Both inputs needs to have the same length"; 
+                console.log("error: missing info")   
+            }
+            else {
+                processOutTable.appendChild(tableRow);   
+            }
+
         }
 
         if (arrT == 0 && burT == 0){
