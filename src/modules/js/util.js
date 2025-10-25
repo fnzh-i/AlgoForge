@@ -62,13 +62,6 @@ export function utils(algoDisplay) {
    
     outputs.appendChild(outputProcess);
 
-    const algoLists = document.createElement('div');
-    algoLists.classList.add("algo-list");
-    algoLists.id = "algo-list";
-    algoLists.textContent;
-    
-    outputText.appendChild(algoLists);
-
 // ====================== UTILITY LISTENERS  ======================
     submitButton.addEventListener("click", convert);
     outputs.addEventListener("click", algorithms);

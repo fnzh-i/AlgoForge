@@ -65,8 +65,7 @@ export function convert() {
         }
     }
 
-    if (submits.textContent == "Submit" && outputs.textContent != "Select an Algorithm" || 
-        submits.textContent != "Submit" && outputs.textContent != "Select an Algorithm"){
+    if (submits.textContent != null && outputs.textContent != "Select an Algorithm"){
         submits.textContent = "Submit";
         outputProcess.innerHTML = "";
         processConvert();
