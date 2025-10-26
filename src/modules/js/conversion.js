@@ -18,7 +18,7 @@ export function convert() {
             "Waiting Time"
             ];
 
-    function processConvert(compres){
+    function processConvert(compres, turnares, waitres) {
 
         const processOutTable = document.createElement("table");
         processOutTable.classList.add("process-table");
@@ -39,12 +39,17 @@ export function convert() {
         for (let p_id = 0; p_id < arrT.length; p_id++) {
             const tableRow = document.createElement("tr");
             tableRow.classList.add("table-row-data");
+
             const completion = compres()[p_id];
+            const turnaround = turnares()[p_id];
+            const waiting = waitres()[p_id];
 
             [p_id, 
              arrTA[p_id],
              burTA[p_id],
-            completion].forEach(data => {
+             completion,
+             turnaround,
+             waiting].forEach(data => {
                 const td = document.createElement("td");
                 td.classList.add("process-output");
                 td.textContent = data;
@@ -65,7 +70,9 @@ export function convert() {
             submits.textContent = "Please enter a valid number";
             console.log("error: no info")  
         }
-       compres();
+        compres();
+        turnares();
+        waitres();
     }
 
     function completionTime(){
@@ -79,12 +86,32 @@ export function convert() {
         }
     return completionResult;
     };
+    function turnaroundTime(){
+        const turnaroundResult = [];
+        let tat = 0;
+
+        for (let tat_i = 0; tat_i < arrT.length; tat_i++) {
+        tat = completionTime()[tat_i] - arrTA[tat_i];
+
+        turnaroundResult.push(tat);
+        }
+    return turnaroundResult;
+    };
+    function waitingTime(){
+        const waitingResult = [];
+        let wt = 0;
+        for (let wt_i = 0; wt_i < burT.length; wt_i++) {
+        wt = turnaroundTime()[wt_i] - burTA[wt_i];
+        waitingResult.push(wt);
+        }
+    return waitingResult;
+    };
 
     if (submits.textContent != null && outputs.textContent != "Select an Algorithm"){
         submits.textContent = "Submit";
         outputProcess.innerHTML = "";
     
-        processConvert(completionTime);
+        processConvert(completionTime, turnaroundTime, waitingTime);
 
     }
 

@@ -15,6 +15,7 @@ export function utils(algoDisplay) {
     arrivalTime.classList.add("user-given");
     arrivalTime.id = "at-box";
     arrivalTime.type = "number";
+    arrivalTime.placeholder = "0123";
     arrivalTime.value;
 
     const burstLabel = document.createElement("label");
@@ -26,7 +27,9 @@ export function utils(algoDisplay) {
     burstTime.classList.add("user-given");
     burstTime.id = "bt-box";
     burstTime.type = "number";
+    burstTime.placeholder = "1234";
     burstTime.value;
+    
 
     algoDisplay.appendChild(givenCont);
 

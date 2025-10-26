@@ -11,4 +11,5 @@ Development ongoing — updates posted as time allows.
                - Removed redundant code and unnecessary element creation
 - Oct 26, 2025 - Integrated FontAwesome with dynamic script loading, added icons.js for GitHub icon rendering, updated initialization,
                and applied icon styling.<br>
-               - Added completion time calculation. Refactored conversion logic to use numeric arrays, updated CSS for improved centering and animation, removed test option from algorithm list, and updated branding text in config.js.
+               - Added completion time calculation. Refactored conversion logic to use numeric arrays, updated CSS for improved centering and animation, removed test option from algorithm list, and updated branding text in config.js.<br>
+               - Add turnaround and waiting time calculations to process table
