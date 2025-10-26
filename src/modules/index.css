@@ -54,6 +54,7 @@ body {
 }
 
 .icons{
+    text-align: center;
     margin: auto;
 }
 .icons a{
@@ -86,7 +87,7 @@ body {
 #at-box{
     border-radius: 9.5px; /* Rounded corners */
     text-align: center;
-    margin: 5px auto;
+    margin: 5px 0;
     padding: 5px;
     font-size: 1.5rem;
 }
@@ -94,7 +95,7 @@ body {
 
     border-radius: 9.5px; /* Rounded corners */
     text-align: center;
-    margin: 5px auto;
+    margin: 5px 0;
     padding: 5px;
     font-size: 1.5rem;
 }
@@ -136,7 +137,7 @@ body {
     border-radius: 9.5px; /* Rounded corners */
     text-align: center;
     font-size: 1.5rem;
-    word-break: break-word;
+    word-wrap: break-word;
     box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5); /* White glowing shadow */
     padding: 10px;
     transition: ease-in-out .3s;
@@ -184,9 +185,8 @@ table, td, th {
     border: 1px solid black;
     padding: 3px;
     margin: 10px 0;
-    word-break: break-word;
+    word-wrap: break-word;
     overflow: hidden;
-  
 }
 
 .output:hover table, .output:hover th, .output:hover  td {
@@ -194,17 +194,4 @@ table, td, th {
     border: 1px solid white;
     transition: ease-in-out .8s;
   
-}
-.fcfsCont{
-    letter-spacing: 1px;
-    font-size: 3ch;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.fcfsAlgo{
-    letter-spacing: 1px;
-    font-size: 3ch;
-    white-space: nowrap;
-    overflow: hidden;
 }
