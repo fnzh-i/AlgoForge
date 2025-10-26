@@ -9,4 +9,6 @@ Development ongoing — updates posted as time allows.
 - Oct 24, 2025 - Refined several functions and revised a few lines of code for displaying output text
 - Oct 25, 2025 - Updated table display and styling for better readability, added hover effects, and revised .gitignore settings.<br>
                - Removed redundant code and unnecessary element creation
-- Oct 26, 2025 - Integrated FontAwesome with dynamic script loading, added icons.js for GitHub icon rendering, updated initialization, and applied icon styling.
+- Oct 26, 2025 - Integrated FontAwesome with dynamic script loading, added icons.js for GitHub icon rendering, updated initialization,
+               and applied icon styling.<br>
+               - Added completion time calculation. Refactored conversion logic to use numeric arrays, updated CSS for improved centering and animation, removed test option from algorithm list, and updated branding text in config.js.

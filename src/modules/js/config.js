@@ -9,7 +9,7 @@ export function mainConfig() {
     const algos = document.createElement("div");
     algos.classList.add("algos-cont");
 
-    algos.textContent="Algo Gen by fnzh";
+    algos.textContent="Algo Gen by fnzh-i";
 
     algoDisplay.appendChild(algos);
 

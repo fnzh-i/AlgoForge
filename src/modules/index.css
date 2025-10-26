@@ -39,7 +39,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
-    animation: typing 5.5s steps(15) infinite alternate-reverse;
+    animation: typing 5.5s steps(19) infinite alternate-reverse;
     margin: 20px auto; /* Center the container with some margin */ 
     
 }
@@ -49,12 +49,12 @@ body {
         width: 0;
     }
     60%, 100% { 
-        width: 17.5ch;
+        width: 19ch;
     }
 }
 
 .icons{
-    text-align: center;
+    margin: auto;
 }
 .icons a{
     
@@ -86,7 +86,7 @@ body {
 #at-box{
     border-radius: 9.5px; /* Rounded corners */
     text-align: center;
-    margin: 5px 0;
+    margin: 5px auto;
     padding: 5px;
     font-size: 1.5rem;
 }
@@ -94,7 +94,7 @@ body {
 
     border-radius: 9.5px; /* Rounded corners */
     text-align: center;
-    margin: 5px 0;
+    margin: 5px auto;
     padding: 5px;
     font-size: 1.5rem;
 }
