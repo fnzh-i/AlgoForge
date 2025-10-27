@@ -1,6 +1,6 @@
 // ====================== UTILITY FUNCTIONS ======================
-import { convert } from "./conversion.js";
-import { algorithms } from "./algorithms.js";
+import { convert } from "../_modules/conversion.js";
+import { algorithms } from "../_modules/algorithms.js";
 
 export function utils(algoDisplay) {
     const givenCont = document.createElement("div");

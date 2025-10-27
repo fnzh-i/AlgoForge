@@ -1,6 +1,6 @@
-import { completionTime, turnaroundTime, waitingTime } from "./_computation/index.js";
+import { completionTime, turnaroundTime, waitingTime } from "../_computation/index.js";
 
-import { inputElements } from "./input.js";
+import { inputElements } from "./_input.js";
 import { getSelectedAlgorithm } from "./_state.js";
 
 // ====================== CONVERSION ======================
@@ -93,7 +93,7 @@ export function convert() {
 
             default:
                 submits.textContent = "This algorithm is not yet implemented";
-                console.log("algorithm not implemented " + outputText);
+                // console.log("Algorithm not implemented: " + outputText);
                 break;
         }
     }

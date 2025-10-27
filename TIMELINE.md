@@ -20,4 +20,5 @@ Development ongoing — updates posted as time allows.
                - Fixed completion time calculation to start from arrival time.<br>
                - Added state management for selected algorithm (basically getter & setter :p).<br>
                - Refactored computation and icons modules structure.<br>
-               - Improved CSS for better mobile support and table styling.
+               - Improved CSS for better mobile support and table styling.<br>
+               - Refactored module structure and update imports.

@@ -1,6 +1,6 @@
 // ====================== MAIN ======================
-import { mainConfig } from "./js/config.js";
-import { utils } from "./js/util.js";
+import { mainConfig } from "./js/_config/config.js";
+import { utils } from "./js/_config/util.js";
 import {icons} from "./js/_icons/icons.js";
 
 window.addEventListener("DOMContentLoaded", () => {

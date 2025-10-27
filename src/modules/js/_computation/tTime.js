@@ -1,4 +1,4 @@
-import { inputElements } from "../input.js";
+import { inputElements } from "../_modules/_input.js";
 import { completionTime } from "./cTime.js";
 // ====================== TURNAROUND TIME ======================
 export function turnaroundTime(){
