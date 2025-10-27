@@ -1,13 +1,11 @@
+import { completionTime } from "./cTime.js";
+import { turnaroundTime } from "./tTime.js";
+import { waitingTime } from "./wTime.js";
+import { inputElements } from "./input.js";
+
 // ====================== CONVERSION ======================
 export function convert() {
-    const arrT = document.getElementById("at-box").value;
-    const burT = document.getElementById("bt-box").value;
-    const outputProcess = document.getElementById("output-process");
-    const outputs = document.getElementById("output-text");
-    const submits = document.getElementById("submit");
-
-    const arrTA = [...arrT].map(Number);
-    const burTA = [...burT].map(Number);
+    const { arrT, burT, arrTA, burTA, outputProcess, outputs, submits } =  inputElements();
 
     const headers = [
             "Process ID",
@@ -78,12 +76,10 @@ export function convert() {
     if (submits.textContent != null && outputs.textContent != "Select an Algorithm"){
         submits.textContent = "Submit";
         outputProcess.innerHTML = "";
-        if(outputs.textContent == "First Come First Serve (FCFS)"){
-            console.log("FCFS conversion");
-            processConvert(completionTime, turnaroundTime, waitingTime);
-        }
-    }
 
+        console.log("FCFS conversion");
+        processConvert(completionTime, turnaroundTime, waitingTime);
+    }
     else if(outputs.textContent == "Select an Algorithm"){
         submits.textContent = "Please select an Algorithm first";
     }

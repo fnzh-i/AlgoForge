@@ -5,7 +5,7 @@ export function algorithms(){
 
 
     const algorithmsList = ["First Come First Serve (FCFS)",
-                            "Shortest-Job-First (SJF)",
+                            "Shortest Job First (SJF)",
                             "Shortest Remaining Time First (SRTF)",
                             "Priority Scheduling (PRIO)",
                             "Preemptive Priority (PRE-PRIO)"];
