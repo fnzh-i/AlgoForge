@@ -2,22 +2,22 @@ import { completionTime } from "./cTime.js";
 import { turnaroundTime } from "./tTime.js";
 import { waitingTime } from "./wTime.js";
 import { inputElements } from "./input.js";
+import { getSelectedAlgorithm } from "./_state.js";
 
 // ====================== CONVERSION ======================
 export function convert() {
     const { arrT, burT, arrTA, burTA, outputProcess, outputs, submits } =  inputElements();
 
     const headers = [
-            "Process ID",
-            "Arrival Time",
-            "Burst Time",
-            "Completion Time",
-            "Turnaround Time",
-            "Waiting Time"
-            ];
+        "Process ID",
+        "Arrival Time",
+        "Burst Time",
+        "Completion Time",
+        "Turnaround Time",
+        "Waiting Time"
+        ];
 
     function processConvert(compres, turnares, waitres) {
-
         const processOutTable = document.createElement("table");
         processOutTable.classList.add("process-table");
         const tableRow = document.createElement("tr");
@@ -52,35 +52,50 @@ export function convert() {
                 td.classList.add("process-output");
                 td.textContent = data;
                 tableRow.appendChild(td);
+                processOutTable.appendChild(tableRow); 
             });
-
-            if(arrT.length != burT.length){
-                submits.textContent = "Both inputs needs to have the same length"; 
-                console.log("error: missing info")   
-            }
-            else {
-                processOutTable.appendChild(tableRow);   
-            }
-
-        }
-
-        if (arrT == 0 && burT == 0){
-            submits.textContent = "Please enter a valid number";
-            console.log("error: no info")  
         }
         compres();
         turnares();
         waitres();
     }
 
-    if (submits.textContent != null && outputs.textContent != "Select an Algorithm"){
-        submits.textContent = "Submit";
+    submits.addEventListener("click", () => {
+        const outputText = getSelectedAlgorithm();
+        if (!outputText || outputText === "Select an Algorithm") {
+            submits.textContent = "Please select an Algorithm first";
+            console.log("error: no algorithm selected");
+            return;
+        }
+        cleanOutputText(outputText);
+    });
+
+    function cleanOutputText(outputText){
         outputProcess.innerHTML = "";
 
-        console.log("FCFS conversion");
-        processConvert(completionTime, turnaroundTime, waitingTime);
-    }
-    else if(outputs.textContent == "Select an Algorithm"){
-        submits.textContent = "Please select an Algorithm first";
+        switch (outputText) {
+            case "First Come First Serve (FCFS)":
+                console.log("FCFS conversion");
+                processConvert(completionTime, turnaroundTime, waitingTime);
+                break;
+
+            case "Shortest-Job-First (SJF)":
+                console.log("SJF conversion");
+                break;
+            case "Shortest Remaining Time First (SRTF)":
+                console.log("SRTF conversion");
+                break;
+            case "Priority Scheduling (PRIO)":
+                console.log("PRIO conversion");
+                break;
+            case "Preemptive Priority (PRE-PRIO)":
+                console.log("PRE-PRIO conversion");
+                break;
+
+            default:
+                submits.textContent = "This algorithm is not yet implemented";
+                console.log("algorithm not implemented " + outputText);
+                break;
+        }
     }
 }
