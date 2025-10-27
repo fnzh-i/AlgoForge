@@ -145,9 +145,7 @@ body {
     touch-action: manipulation; /* smoother mobile taps */
 }
 
-.output:hover,
-.output:focus,
-.output:active{
+.output:hover, .output:active{
     /* border: 2px solid  rgb(255, 255, 255); */
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -166,11 +164,13 @@ body {
     display:block;
     color: rgb(255, 255, 255);
     position: relative;
+    font-size: 1.3rem;
+    padding: 5px;
 }   
 .output-text .algo-list{
     display: none;
     border-radius: 9.5px; /* Rounded corners */
-    padding: 5px;
+    padding: 10px;
 }
 .output-text:hover .algo-list{
     display:block;
@@ -179,9 +179,9 @@ body {
 .output-text a:hover{
     background-color: rgba(150, 150, 150, 0.5);
     border-radius: 6.5px; /* Rounded corners */
-    margin: 10px 0;
-    padding: 3px;
-    transition: ease-in-out .1s;
+    font-size: 1em;
+    padding: 5px;
+    transition: all ease-in-out .150s;
 }   
 
 table, td {

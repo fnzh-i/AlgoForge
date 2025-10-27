@@ -21,4 +21,5 @@ Development ongoing — updates posted as time allows.
                - Added state management for selected algorithm (basically getter & setter :p).<br>
                - Refactored computation and icons modules structure.<br>
                - Improved CSS for better mobile support and table styling.<br>
-               - Refactored module structure and update imports.
+               - Refactored module structure and update imports.<br>
+               - Updated output and algo-list styles for better UI.
