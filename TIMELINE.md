@@ -17,4 +17,5 @@ Development ongoing — updates posted as time allows.
                - Added a check for a chosen algorithm (planning to change it to a switch statement).
 - Oct 28, 2025 - Refactored input handling and time calculation modules.<br>
                - Added input validation for numeric and length checks.<br>
-               - Fixed completion time calculation to start from arrival time.
+               - Fixed completion time calculation to start from arrival time.<br>
+               - Added state management for selected algorithm (basically getter & setter :p)
