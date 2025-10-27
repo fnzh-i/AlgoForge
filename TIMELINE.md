@@ -15,4 +15,6 @@ Development ongoing — updates posted as time allows.
                - Added turnaround and waiting time calculations to process table.
 - Oct 27, 2025 - Refactored time calculation functions into separate modules.<br>
                - Added a check for a chosen algorithm (planning to change it to a switch statement).
-- Oct 28, 2025 - Refactored input handling and time calculation modules
+- Oct 28, 2025 - Refactored input handling and time calculation modules.<br>
+               - Added input validation for numeric and length checks.<br>
+               - Fixed completion time calculation to start from arrival time
