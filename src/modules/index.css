@@ -141,9 +141,13 @@ body {
     box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5); /* White glowing shadow */
     padding: 10px;
     transition: ease-in-out .3s;
+    user-select: none; /* prevent accidental highlighting */
+    touch-action: manipulation; /* smoother mobile taps */
 }
 
-.output:hover{
+.output:hover,
+.output:focus,
+.output:active{
     /* border: 2px solid  rgb(255, 255, 255); */
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -180,18 +184,40 @@ body {
     transition: ease-in-out .1s;
 }   
 
-table, td, th {
-    max-width: 55rem;
+table, td {
+    max-width: 45rem;
     border: 1px solid black;
-    padding: 3px;
+    padding: .5rem;
     margin: 10px 0;
     word-wrap: break-word;
     overflow: hidden;
 }
+ th{
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid black;
+ }
 
 .output:hover table, .output:hover th, .output:hover  td {
 
     border: 1px solid white;
     transition: ease-in-out .8s;
   
+}
+
+@media (max-width: 600px) {
+    .algos-cont{
+        font-size: 2.5em;
+    }
+    .submit-button{
+        font-size: .9em;
+    }
+    .output {
+        font-size: 1em;
+    }
+    th{
+        font-size: .8em;
+
+        word-break: break-word;
+    }   
 }

@@ -1,6 +1,5 @@
-import { completionTime } from "./cTime.js";
-import { turnaroundTime } from "./tTime.js";
-import { waitingTime } from "./wTime.js";
+import { completionTime, turnaroundTime, waitingTime } from "./_computation/index.js";
+
 import { inputElements } from "./input.js";
 import { getSelectedAlgorithm } from "./_state.js";
 

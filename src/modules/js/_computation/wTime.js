@@ -1,4 +1,4 @@
-import { inputElements } from "./input.js";
+import { inputElements } from "../input.js";
 import { turnaroundTime } from "./tTime.js";
 // ====================== WAITING TIME ======================
 export function waitingTime(){

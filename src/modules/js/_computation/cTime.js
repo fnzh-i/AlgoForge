@@ -1,4 +1,4 @@
-import { inputElements } from "./input.js";
+import { inputElements } from "../input.js";
 // ====================== COMPLETION TIME ======================
 export function completionTime(){
     const { arrTA, burT, burTA } = inputElements();

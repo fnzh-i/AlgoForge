@@ -18,4 +18,6 @@ Development ongoing — updates posted as time allows.
 - Oct 28, 2025 - Refactored input handling and time calculation modules.<br>
                - Added input validation for numeric and length checks.<br>
                - Fixed completion time calculation to start from arrival time.<br>
-               - Added state management for selected algorithm (basically getter & setter :p)
+               - Added state management for selected algorithm (basically getter & setter :p).<br>
+               - Refactored computation and icons modules structure.<br>
+               - Improved CSS for better mobile support and table styling.
