@@ -75,44 +75,13 @@ export function convert() {
         waitres();
     }
 
-    function completionTime(){
-        const completionResult = [];
-        let sum = 0;
-        
-        for (let ct_i = 0; ct_i < burT.length; ct_i++) {
-        sum += burTA[ct_i];
-        
-        completionResult.push(sum);
-        }
-    return completionResult;
-    };
-    function turnaroundTime(){
-        const turnaroundResult = [];
-        let tat = 0;
-
-        for (let tat_i = 0; tat_i < arrT.length; tat_i++) {
-        tat = completionTime()[tat_i] - arrTA[tat_i];
-
-        turnaroundResult.push(tat);
-        }
-    return turnaroundResult;
-    };
-    function waitingTime(){
-        const waitingResult = [];
-        let wt = 0;
-        for (let wt_i = 0; wt_i < burT.length; wt_i++) {
-        wt = turnaroundTime()[wt_i] - burTA[wt_i];
-        waitingResult.push(wt);
-        }
-    return waitingResult;
-    };
-
     if (submits.textContent != null && outputs.textContent != "Select an Algorithm"){
         submits.textContent = "Submit";
         outputProcess.innerHTML = "";
-    
-        processConvert(completionTime, turnaroundTime, waitingTime);
-
+        if(outputs.textContent == "First Come First Serve (FCFS)"){
+            console.log("FCFS conversion");
+            processConvert(completionTime, turnaroundTime, waitingTime);
+        }
     }
 
     else if(outputs.textContent == "Select an Algorithm"){
