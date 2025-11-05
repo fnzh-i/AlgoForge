@@ -1,13 +1,11 @@
-import { inputElements } from "../_modules/_input.js";
 import { completionTime } from "./cTime.js";
 // ====================== TURNAROUND TIME ======================
-export function turnaroundTime(){
-    const { arrT, arrTA } = inputElements();
+export function turnaroundTime(combinedList){
+    const completion = completionTime(combinedList);
     const turnaroundResult = [];
-    let tat = 0;
 
-    for (let tat_i = 0; tat_i < arrT.length; tat_i++) {
-        tat = completionTime()[tat_i] - arrTA[tat_i];
+    for (let tat_i = 0; tat_i < combinedList.length; tat_i++) {
+        const tat = completion[tat_i] - combinedList[tat_i].arrivalTime;
         turnaroundResult.push(tat);
     }
     return turnaroundResult;

@@ -1,13 +1,12 @@
-import { inputElements } from "../_modules/_input.js";
 import { turnaroundTime } from "./tTime.js";
 // ====================== WAITING TIME ======================
-export function waitingTime(){
-    const { burT, burTA } = inputElements();
+export function waitingTime(combinedList){
+    const waiting = turnaroundTime(combinedList)
     const waitingResult = [];
-    let wt = 0;
+    
 
-    for (let wt_i = 0; wt_i < burT.length; wt_i++) {
-        wt = turnaroundTime()[wt_i] - burTA[wt_i];
+    for (let wt_i = 0; wt_i < combinedList.length; wt_i++) {
+        const wt = waiting[wt_i] - combinedList[wt_i].burstTime;
         waitingResult.push(wt);
     }
     return waitingResult;

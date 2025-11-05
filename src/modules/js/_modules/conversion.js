@@ -16,7 +16,7 @@ export function convert() {
         "Waiting Time"
         ];
 
-    function processConvert(compres, turnares, waitres) {
+    function processConvert(list, completion, turnaround, waiting) {
         const processOutTable = document.createElement("table");
         processOutTable.classList.add("process-table");
         const tableRow = document.createElement("tr");
@@ -33,20 +33,16 @@ export function convert() {
             
         });
 
-        for (let p_id = 0; p_id < arrT.length; p_id++) {
+        for (let p_id = 0; p_id < list.length; p_id++) {
             const tableRow = document.createElement("tr");
             tableRow.classList.add("table-row-data");
 
-            const completion = compres()[p_id];
-            const turnaround = turnares()[p_id];
-            const waiting = waitres()[p_id];
-
             ["P" + p_id, 
-             arrTA[p_id],
-             burTA[p_id],
-             completion,
-             turnaround,
-             waiting].forEach(data => {
+            list[p_id].arrivalTime,
+            list[p_id].burstTime,
+             completion[p_id],
+             turnaround[p_id],
+             waiting[p_id]].forEach(data => {
                 const td = document.createElement("td");
                 td.classList.add("process-output");
                 td.textContent = data;
@@ -54,9 +50,6 @@ export function convert() {
             });
             processOutTable.appendChild(tableRow);
         }
-        compres();
-        turnares();
-        waitres();
     }
 
     submits.addEventListener("click", () => {
@@ -75,7 +68,15 @@ export function convert() {
         switch (outputText) {
             case "First Come First Serve (FCFS)":
                 console.log("FCFS conversion");
-                combinedList.sort(processConvert(completionTime, turnaroundTime, waitingTime));
+                // Sort by arrival time before table is created
+                combinedList.sort((a, b) => a.arrivalTime - b.arrivalTime);
+
+                // Pass the sorted list to the computation functions
+                const completion = completionTime(combinedList);
+                const turnaround = turnaroundTime(combinedList);
+                const waiting = waitingTime(combinedList);
+
+                processConvert(combinedList, completion, turnaround, waiting);
                 break;
 
             case "Shortest-Job-First (SJF)":

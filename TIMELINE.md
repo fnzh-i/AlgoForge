@@ -23,4 +23,5 @@ Development ongoing — updates posted as time allows.
                - Improved CSS for better mobile support and table styling.<br>
                - Refactored module structure and update imports.<br>
                - Updated output and algo-list styles for better UI.
-- Nov 5, 2025 - Improved input validation and process display, and added a combinedList for paired arrival and burst times. 
+- Nov 5, 2025  - Improved input validation and process display, and added a combinedList for paired arrival and burst times.<br>
+               - Refactored time computation functions to use combinedList.
