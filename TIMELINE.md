@@ -25,5 +25,5 @@ Development ongoing — updates posted as time allows.
                - Updated output and algo-list styles for better UI.
 - Nov 5, 2025  - Improved input validation and process display, and added a combinedList for paired arrival and burst times.<br>
                - Refactored time computation functions to use combinedList.<br>
-               - Removed unused variables from convert function
+               - Removed unused variables from convert function. <br>
                - **THE FCFS FUNCTION IS CURRENTLY WORKING PERFECTLY AS OF *Nov 5, 2025*.** Further fine-tuning will be done at a later date.
