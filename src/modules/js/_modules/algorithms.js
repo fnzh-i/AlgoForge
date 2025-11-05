@@ -55,10 +55,6 @@ export function algorithms(){
         const selectedAlgo = e.target;
         if (selectedAlgo && selectedAlgo.classList.contains("algo-anc")) {
             const algoText = selectedAlgo.textContent.replace(/"/g, '').trim();
-            if (algoText === "Select an Algorithm") {
-                // console.log("error: no algorithm selected");
-                return;
-            }
             outputs.textContent = algoText;  // Display selected algo name
             setSelectedAlgorithm(algoText);  // Pass it to conversion.js
             // console.log("Chosen algorithm:", algoText);

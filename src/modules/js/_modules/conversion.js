@@ -5,7 +5,7 @@ import { getSelectedAlgorithm } from "./_state.js";
 
 // ====================== CONVERSION ======================
 export function convert() {
-    const { arrT, burT, arrTA, burTA, outputProcess, outputs, submits } =  inputElements();
+    const { arrT, arrTA, burTA, outputProcess, combinedList, submits } =  inputElements();
 
     const headers = [
         "Process ID",
@@ -41,7 +41,7 @@ export function convert() {
             const turnaround = turnares()[p_id];
             const waiting = waitres()[p_id];
 
-            [p_id, 
+            ["P" + p_id, 
              arrTA[p_id],
              burTA[p_id],
              completion,
@@ -51,8 +51,8 @@ export function convert() {
                 td.classList.add("process-output");
                 td.textContent = data;
                 tableRow.appendChild(td);
-                processOutTable.appendChild(tableRow); 
             });
+            processOutTable.appendChild(tableRow);
         }
         compres();
         turnares();
@@ -75,7 +75,7 @@ export function convert() {
         switch (outputText) {
             case "First Come First Serve (FCFS)":
                 console.log("FCFS conversion");
-                processConvert(completionTime, turnaroundTime, waitingTime);
+                combinedList.sort(processConvert(completionTime, turnaroundTime, waitingTime));
                 break;
 
             case "Shortest-Job-First (SJF)":
