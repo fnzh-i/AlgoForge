@@ -5,7 +5,7 @@ import { getSelectedAlgorithm } from "./_state.js";
 
 // ====================== CONVERSION ======================
 export function convert() {
-    const { arrT, arrTA, burTA, outputProcess, combinedList, submits } =  inputElements();
+    const {outputProcess, combinedList, submits } =  inputElements();
 
     const headers = [
         "Process ID",
